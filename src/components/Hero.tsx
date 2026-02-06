@@ -144,7 +144,8 @@ const Hero = () => {
                 >
                     <Magnetic strength={0.2}>
                         <a
-                            href="#"
+                            href="/resume.pdf"
+                            download="Yashash_Chandra_Resume.pdf"
                             className="px-10 md:px-14 py-5 md:py-6 bg-primary text-white rounded-2xl font-black shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all flex items-center gap-4 text-lg md:text-xl group overflow-hidden relative"
                         >
                             <span className="relative z-10 uppercase tracking-tight">Download CV</span>
