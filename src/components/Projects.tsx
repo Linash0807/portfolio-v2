@@ -8,7 +8,7 @@ const projects = [
         description: "A full-stack student dashboard to track academic progress, tasks, and career milestones. Features daily streak tracking, progress visualization, and real-time notifications.",
         tags: ["React", "Node.js", "MongoDB", "Express"],
         stats: "40% Engagement Increase",
-        github: "https://github.com/Linash0807/CAREER-DOST",
+        github: "https://github.com/Linash0807/career",
         live: "https://career-dost-1.onrender.com/",
         image: "/career-dost.jpeg"
     },
@@ -18,8 +18,8 @@ const projects = [
         description: "AI-integrated agritech platform featuring Gemini-powered crop disease diagnosis, a farming assistant chatbot, and weather analytics. Built with TypeScript and Shadcn UI.",
         tags: ["TypeScript", "Gemini AI", "Tailwind", "Recharts"],
         stats: "AI Health Monitoring",
-        github: "https://github.com/Linash0807/SWASTH-KHET-2.0",
-        live: "https://swasth-khet-2-0-1.onrender.com/",
+        github: "https://github.com/Linash0807/Swast",
+        live: "https://swast.onrender.com",
         image: "/swasthkhet.jpeg"
     },
     {
