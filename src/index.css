@@ -70,7 +70,8 @@ body {
 }
 
 .glow-overlay {
-  background: radial-gradient(600px circle at var(--x) var(--y), rgba(0, 82, 204, 0.08), transparent 40%);
+  background: radial-gradient(600px circle at var(--x) var(--y), rgba(0, 82, 204, 0.15), transparent 40%);
+  transition: opacity 0.3s ease;
 }
 
 .hero-glow {
@@ -119,4 +120,47 @@ body {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Animated Gradient Mesh */
+.gradient-mesh {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(0, 82, 204, 0.03) 0%, 
+    rgba(59, 130, 246, 0.05) 25%,
+    transparent 50%,
+    rgba(0, 82, 204, 0.04) 75%,
+    rgba(14, 165, 233, 0.03) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+  will-change: background-position;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enhanced Spotlight Effect */
+.spotlight-halo {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(0, 82, 204, 0.06) 30%, transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Particle Glow Enhancement */
+.particle-glow {
+  filter: blur(40px);
+  will-change: transform, opacity;
 }

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Sparkles, FileText } from "lucide-react";
 import React, { useState } from "react";
 import Magnetic from "./Magnetic"; // Added Magnetic import
+import DotGrid from "./DotGrid";
 
 const Hero = () => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -27,9 +28,20 @@ const Hero = () => {
         >
             {/* Cinematic Background */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                {/* Animated Gradient Mesh */}
+                <div className="gradient-mesh" />
+
+                {/* Interactive Dot Grid */}
+                <DotGrid
+                    dotSize={1.5}
+                    dotSpacing={25}
+                    dotColor="rgba(0, 82, 204, 0.4)"
+                    rectWidth={250}
+                    rectHeight={250}
+                />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full noise-subtle opacity-5" />
 
-                {/* Floating Elements */}
+                {/* Enhanced Floating Elements with Scale & Blur */}
                 {[...Array(6)].map((_, i) => (
                     <motion.div
                         key={i}
@@ -37,32 +49,48 @@ const Hero = () => {
                             y: [0, -40, 0],
                             x: [0, 20, 0],
                             rotate: [0, 10, 0],
-                            opacity: [0.03, 0.08, 0.03]
+                            scale: [1, 1.1, 1],
+                            opacity: [0.03, 0.1, 0.03]
                         }}
                         transition={{
                             duration: 10 + i * 2,
                             repeat: Infinity,
                             ease: "easeInOut"
                         }}
-                        className="absolute hidden lg:block"
+                        className="absolute hidden lg:block particle-glow"
                         style={{
                             top: `${20 + i * 12}%`,
                             left: `${15 + (i % 3) * 30}%`,
                             width: `${100 + i * 50}px`,
                             height: `${100 + i * 50}px`,
-                            background: 'radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, transparent 70%)',
-                            filter: 'blur(40px)',
+                            background: 'radial-gradient(circle, rgba(0, 82, 204, 0.15) 0%, transparent 70%)',
                             borderRadius: '50%'
                         }}
                     />
                 ))}
 
-                {/* Mouse Reactive Gradient */}
+                {/* Spotlight Halo - Follows Mouse */}
+                <motion.div
+                    className="hidden lg:block spotlight-halo"
+                    animate={{
+                        x: mousePos.x - 400,
+                        y: mousePos.y - 400
+                    }}
+                    transition={{
+                        type: "spring",
+                        damping: 30,
+                        stiffness: 200,
+                        mass: 0.5
+                    }}
+                />
+
+                {/* Enhanced Mouse Reactive Gradient */}
                 <div
                     className="hidden lg:block absolute inset-0 glow-overlay"
                     style={{ '--x': `${mousePos.x}px`, '--y': `${mousePos.y}px` } as any}
                 />
             </div>
+
 
             <div className="flex flex-col items-center text-center space-y-10 md:space-y-16 lg:space-y-24">
                 {/* Visual Anchor: Character/Photo */}
