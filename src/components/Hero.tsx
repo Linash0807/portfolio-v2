@@ -97,21 +97,28 @@ const Hero = () => {
                 </motion.div>
 
                 <div className="space-y-8">
-                    <h1 className="flex flex-wrap justify-center gap-x-4 md:gap-x-6">
-                        {(["Yashash", "Chandra"]).map((word, wordIdx) => (
-                            <span key={wordIdx} className="inline-flex whitespace-nowrap overflow-visible py-2">
-                                {word.split("").map((char, charIdx) => (
-                                    <motion.span
-                                        key={charIdx}
-                                        variants={letterVariants}
-                                        className="text-3xl sm:text-6xl md:text-8xl lg:text-8xl font-black text-[#1a1a1a] select-none display-block"
-                                    >
-                                        {char}
-                                    </motion.span>
-                                ))}
-                            </span>
-                        ))}
-                    </h1>
+                    <Magnetic strength={0.1}>
+                        <h1 className="flex flex-wrap justify-center gap-x-4 md:gap-x-6 cursor-default">
+                            {(["Yashash", "Chandra"]).map((word, wordIdx) => (
+                                <span key={wordIdx} className="inline-flex whitespace-nowrap overflow-visible py-2">
+                                    {word.split("").map((char, charIdx) => (
+                                        <motion.span
+                                            key={charIdx}
+                                            variants={letterVariants}
+                                            whileHover={{
+                                                y: -8,
+                                                color: "#3b82f6",
+                                                transition: { type: "spring", stiffness: 400, damping: 10 }
+                                            }}
+                                            className="text-3xl sm:text-6xl md:text-8xl lg:text-8xl font-black text-[#1a1a1a] select-none display-block"
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                </span>
+                            ))}
+                        </h1>
+                    </Magnetic>
 
                     <motion.div
                         initial={{ opacity: 0 }}
