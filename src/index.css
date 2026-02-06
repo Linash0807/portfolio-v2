@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-text-main: var(--text-main);
+  --color-text-sub: var(--text-sub);
+  --color-bg-base: var(--bg-base);
+  --color-bg-card: var(--bg-card);
+}
+
+:root {
+  --primary: #0052CC;
+  /* Professional Blue */
+  --bg-base: #f4f7f9;
+  --bg-card: #ffffff;
+  --text-main: #0a0a0a;
+  --text-sub: #5c6c7b;
+  --border-light: rgba(0, 0, 0, 0.05);
+  --accent-light: rgba(0, 82, 204, 0.05);
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: 'Inter', 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Precise Glass Card for Light Theme */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 82, 204, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 82, 204, 0.08);
+}
+
+/* Timeline Dot for Light Theme */
+.timeline-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background-color: var(--primary);
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 15px rgba(0, 82, 204, 0.2);
+}
+
+/* Typography Helpers */
+.title-gradient {
+  background: linear-gradient(135deg, #0052CC 0%, #3e8bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.glow-overlay {
+  background: radial-gradient(600px circle at var(--x) var(--y), rgba(0, 82, 204, 0.08), transparent 40%);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.noise-subtle {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
