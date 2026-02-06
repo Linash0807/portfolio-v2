@@ -9,7 +9,7 @@ const projects = [
         tags: ["React", "Node.js", "MongoDB", "Express"],
         stats: "40% Engagement Increase",
         github: "https://github.com/Linash0807/career",
-        live: "https://career-dost-1.onrender.com/",
+        live: "https://career-gq51.onrender.com",
         image: "/career-dost.jpeg"
     },
     {
