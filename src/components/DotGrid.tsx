@@ -19,7 +19,7 @@ const DotGrid: React.FC<DotGridProps> = ({
 }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const mousePos = useRef({ x: -1000, y: -1000 });
-    const animationFrameId = useRef<number>();
+    const animationFrameId = useRef<number | undefined>(undefined);
 
     useEffect(() => {
         const canvas = canvasRef.current;
