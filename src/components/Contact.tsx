@@ -117,11 +117,11 @@ const Contact = () => {
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                                                 <div className="space-y-3">
                                                     <label className="text-[10px] font-mono font-black text-[#5c6c7b] uppercase tracking-widest ml-1">Name</label>
-                                                    <input type="text" name="name" required placeholder="John Doe" className="w-full bg-[#f4f7f9] border-none rounded-2xl p-4 md:p-5 text-base font-medium focus:ring-2 focus:ring-primary/20 transition-all" />
+                                                    <input type="text" name="name" required placeholder="Your Name" className="w-full bg-[#f4f7f9] border-none rounded-2xl p-4 md:p-5 text-base font-medium focus:ring-2 focus:ring-primary/20 transition-all" />
                                                 </div>
                                                 <div className="space-y-3">
                                                     <label className="text-[10px] font-mono font-black text-[#5c6c7b] uppercase tracking-widest ml-1">Email</label>
-                                                    <input type="email" name="email" required placeholder="john@example.com" className="w-full bg-[#f4f7f9] border-none rounded-2xl p-4 md:p-5 text-base font-medium focus:ring-2 focus:ring-primary/20 transition-all" />
+                                                    <input type="email" name="email" required placeholder="Your Email" className="w-full bg-[#f4f7f9] border-none rounded-2xl p-4 md:p-5 text-base font-medium focus:ring-2 focus:ring-primary/20 transition-all" />
                                                 </div>
                                             </div>
                                             <div className="space-y-3">
