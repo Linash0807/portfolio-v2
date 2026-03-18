@@ -108,7 +108,7 @@ const Hero = () => {
                             className="w-32 h-32 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full border-4 border-white overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative"
                         >
                             <img
-                                src="https://drive.google.com/thumbnail?id=1Cj2LR1zv8OOy6kxpibQw-WFI9tknnQz1&sz=w1000"
+                                src="/photo.png"
                                 alt="Yashash Chandra"
                                 className="w-full h-full object-cover object-top scale-110 transition-transform duration-500 hover:scale-125"
                             />
