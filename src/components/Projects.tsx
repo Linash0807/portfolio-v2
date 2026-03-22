@@ -19,7 +19,7 @@ const projects = [
         tags: ["TypeScript", "Gemini AI", "Tailwind", "Recharts"],
         stats: "AI Health Monitoring",
         github: "https://github.com/Linash0807/Swast",
-        live: "https://swast.onrender.com",
+        live: "https://swasth-khet-2-0-1.onrender.com",
         image: "/swasthkhet.jpeg"
     },
     {
